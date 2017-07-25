@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="jquery autocomplete invoice, jquery autocomplete invoice module, invoice using jqueryautocomplete, jquery invoice module  autocomplete, invoice using jquery autocomplete">
+    <meta name="keywords" content="jquery autocomplete invoice, jquery autocomplete invoice module, invoice using jqueryautocomplete, jquery invoice module  autocomplete, invoice using jquery autocomplete">
+    <meta name="author" content="muni">
+    <link rel="icon" href="http://demo.smarttutorials.net/favicon.ico">
+    <title>Invoice System Using jQuery Autocomplete</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Noto+Serif:400,700">
+    <!-- Bootstrap core CSS -->
+    <link href="~/code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet">
+    <link href="~/maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/datepicker.css" rel="stylesheet">
+    <link href="~/maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="~/css/sticky-footer-navbar.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="~/js/ie.js"></script>
+    <script src="~/js/ajax.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <script src="~/css/f.txt"></script>
+
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/jquery")
+
+    
+    @Scripts.Render("~/Scripts/mywebapp/customer/search.js")
+
+
+    <style>
+        .navlinks a {
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+
+    @RenderSection("Header", false)
+
+</head>
+<body>
+
+    <div class="navlinks">
+       
+    </div>
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Nadeem Pharmacy</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"> <a href="Reciept"><i class="fa fa-home"></i>Home</a> </li>
+                    <li><a href="Products"> <i class="fa fa-book"></i> Product </a></li>
+                    <li><a href="ShowAll"> <i class="fa fa-bank"></i> Customer </a></li>
+                    <li><a href="#"> <i class="fa fa-file"></i> Aboutus </a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!-- Begin page content -->
+    <div class="container content">
+        <div class='row'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <h1 class="text-center title">Pharmacy System</h1>
+            </div>
+        </div>
+
+
+
+        @RenderBody()
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

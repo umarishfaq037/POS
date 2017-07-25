@@ -1,0 +1,47 @@
+﻿@model PracticePart1.Models.UserDTO
+@{
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <div class="login-page">
+            <div class="form">
+                <form class="register-form">
+                    <input type="text" placeholder="name" />
+                    <input type="password" placeholder="password" />
+                    <input type="text" placeholder="email address" />
+                    <button>create</button>
+                    <p class="message">Already registered? <a href="#">Sign In</a></p>
+                </form>
+                <form class="login-form" action="~/Customer/Reciept">
+                    <tr>
+                        <td>@Html.LabelFor(a => a.Email)</td>
+                        <td>@Html.TextBoxFor(a => a.Email)</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(a => a.Password)
+                        </td>
+                        <td>
+                            @Html.PasswordFor(a => a.Password)
+                        </td>
+                        <td>
+                           
+                        </td>
+                    </tr>
+                    <button>login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

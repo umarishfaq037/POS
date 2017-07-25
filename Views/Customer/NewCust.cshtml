@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "NewCust";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<a href="@Url.Content("~/Customer/NewCust")">New Customer</a>
+<a href="@Url.Content("~/Customer/ShowAll")">All Customers</a>
+<div>
+    <span>Name: </span> <input type="text" id="textName" /> <br />
+    <span>Address:</span> <input type="text" id="textAddress" /> <br />
+    <input type="button" id="btnSave" value="Save" />
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(MainFunction);
+    function MainFunction() {
+
+        $("#btnSave").click(function (e) {
+
+            var data = {};
+            data.Name = $("#textName").val();
+            data.Address = $("#textAddress").val();
+
+            var settings = {
+                type: "POST",
+                data: data,
+                async: true,
+                url: "/Customer/SaveCustomer",
+                success: function (d) {
+                    if (d.success)
+                        alert(d.message);
+                }
+            };
+            jQuery.ajax(settings);
+            return false;
+        });//End of hyperlink Click
+    }//End of Main Function
+
+</script>

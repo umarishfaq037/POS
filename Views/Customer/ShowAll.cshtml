@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "ShowAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section Header
+{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/mywebapp/Customer/customer.js")"></script>
+}
+
+
+<h2>ShowAll</h2>
+<a href="@Url.Content("~/Customer/NewCust")">New Customer</a>
+<a href="@Url.Content("~/Customer/ShowAll")">All Customers</a>
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>PhoneNumber</td>
+        </tr>
+    </thead>
+    <tbody id="tblBody">
+
+    </tbody>
+</table>
+
+<div id="divoverlay" class="overlay">
+</div>
+
+<div id="modal_dialog" class="web_dialog">
+    <div class="dataContainer">
+        <span style="display:none" class="customerid"></span>
+        <span>Name: </span> <input type="text" id="textName" /> <br />
+        <span>Address:</span> <input type="text" id="textAddress" /> <br />
+        <span>Phone:</span> <input type="text" id="textPhone" /> <br />
+        
+        <input type="button" id="btnSave" value="Save" /> <br />
+        <a id="lnkClose" href="#">close</a>
+    </div>
+</div>
+

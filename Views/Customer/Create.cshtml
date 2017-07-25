@@ -1,0 +1,68 @@
+﻿@model PracticePart1.Models.ProductDTO
+
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2>Insert</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>ProductDTO</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Manufacturer)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Manufacturer)
+            @Html.ValidationMessageFor(model => model.Manufacturer)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Expiry)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Expiry)
+            @Html.ValidationMessageFor(model => model.Expiry)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MaufacturingDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MaufacturingDate)
+            @Html.ValidationMessageFor(model => model.MaufacturingDate)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Products")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
